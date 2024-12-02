@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectumConsoleApp01", "DirectumConsoleApp01\DirectumConsoleApp01.csproj", "{76CDB355-617E-4F4D-957F-9490D45EF494}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectumConsoleApp01", "DirectumConsoleApp01\DirectumConsoleApp01.csproj", "{76CDB355-617E-4F4D-957F-9490D45EF494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLib", "Domain\CoreLib.csproj", "{ED32821A-1894-4DEA-8E2F-14A1552B0337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLib", "Domain\CoreLib.csproj", "{ED32821A-1894-4DEA-8E2F-14A1552B0337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingDomainLib", "MeetingLib\MeetingDomainLib.csproj", "{0DCBE20D-D4BB-4927-A964-DD2BA9EE549C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeetingDomainLib", "MeetingLib\MeetingDomainLib.csproj", "{0DCBE20D-D4BB-4927-A964-DD2BA9EE549C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetingCoreLib", "MeetingCQRSLib\MeetingCoreLib.csproj", "{7982BE57-FE54-4E0D-B43F-E2E03B3693EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeetingCoreLib", "MeetingCQRSLib\MeetingCoreLib.csproj", "{7982BE57-FE54-4E0D-B43F-E2E03B3693EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectumTest", "DirectumTest\DirectumTest.csproj", "{C12ED6ED-102D-4F45-B7F3-874FAEBC87B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7982BE57-FE54-4E0D-B43F-E2E03B3693EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7982BE57-FE54-4E0D-B43F-E2E03B3693EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7982BE57-FE54-4E0D-B43F-E2E03B3693EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12ED6ED-102D-4F45-B7F3-874FAEBC87B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12ED6ED-102D-4F45-B7F3-874FAEBC87B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12ED6ED-102D-4F45-B7F3-874FAEBC87B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12ED6ED-102D-4F45-B7F3-874FAEBC87B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
