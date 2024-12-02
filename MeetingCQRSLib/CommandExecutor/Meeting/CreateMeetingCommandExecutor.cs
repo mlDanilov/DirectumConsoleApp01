@@ -31,25 +31,32 @@ namespace MeetingCoreLib.CommandExecutor.Meeting
 
         public override void Execute(CreateMeetingCommand command_)
         {
-            if ((command_.Parameters.From <= DateTime.Now) && (!command_.IsAchive))
-                throw new CommandException<CreateMeetingCommand>(
-                    $"Дата начала встречи({command_.Parameters.From.ToCustomSTR()}) раньше текущего времени", command_
-                    );
+            try
+            {
+                if ((command_.Parameters.From <= DateTime.Now) && (!command_.IsAchive))
+                    throw new CommandException<CreateMeetingCommand>(
+                        $"Дата начала встречи({command_.Parameters.From.ToCustomSTR()}) раньше текущего времени", command_
+                        );
 
-            if (_model.MeetingDisct.Count == 0)
-            {
-                var meeting = new Meeting(1, command_.Parameters.From, command_.Parameters.To);
-                _model.MeetingDisct.Add(meeting.Id, meeting);
-                return;
+                if (_model.MeetingDisct.Count == 0)
+                {
+                    var meeting = new Meeting(1, command_.Parameters.From, command_.Parameters.To);
+                    _model.MeetingDisct.Add(meeting.Id, meeting);
+                    return;
+                }
+                else
+                {
+                    //Проверка на пересечение с существующими встречами
+                    checkIntersection(command_);
+                    int newId = getNewMeetingId();
+                    var meeting = new Meeting(newId, command_.Parameters.From, command_.Parameters.To);
+                    _model.MeetingDisct.Add(newId, meeting);
+                    return;
+                }
             }
-            else
+            catch (System.Exception)
             {
-                //Проверка на пересечение с существующими встречами
-                checkIntersection(command_);
-                int newId = getNewMeetingId();
-                var meeting = new Meeting(newId, command_.Parameters.From, command_.Parameters.To);
-                _model.MeetingDisct.Add(newId, meeting);
-                return;
+                throw;
             }
         }
         /// <summary>

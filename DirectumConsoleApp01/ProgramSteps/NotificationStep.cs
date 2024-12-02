@@ -245,7 +245,7 @@ namespace DirectumConsoleApp01.ProgramSteps
             Console.WriteLine($"{index++}) Создать уведомление(meetingId дней часов минут секунд): 'create meetingId dd hh mm ss' ");
             Console.WriteLine($"{index}.1)Изменить уведомление(notificationId дней часов минут секунд): 'update1 notificationId dd hh mm ss'");
             Console.WriteLine($"{index}.2)Изменить уведомление(notificationId meetingId): 'update2 notificationId meetingId' ");
-            Console.WriteLine($"{index++}.3)Изменить уведомление(notificationId IsNotified): 'update3 notificationId isNotified(0/1)' ");
+            Console.WriteLine($"{index++}.3)Изменить уведомление(notificationId IsNotified): 'update3 notificationId isNotified(true/false)' ");
             Console.WriteLine($"{index++})Удалить уведомление(notificationId): 'delete notificationId' ");
             Console.WriteLine();
             Console.WriteLine($"{index++})Вернуться в главное меню: 'mainMenu' ");
