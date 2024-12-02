@@ -17,4 +17,8 @@
     <ProjectReference Include="..\MeetingLib\MeetingDomainLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Documents\" />
+  </ItemGroup>
+
 </Project>
