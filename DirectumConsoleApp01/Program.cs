@@ -35,15 +35,8 @@ internal class Program
         NotificationHelper.QueryDispatcher = queryDispatcher;
         NotificationHelper.CommandDispatcher = cmdDispatcher;
        
-        MeetingHelper.CreateMeeting(new DateTime(2024, 12, 2, 1, 0, 0), new DateTime(2024, 12, 2, 2, 0, 0));
-        MeetingHelper.CreateMeeting(new DateTime(2024, 12, 2, 2, 0, 1), new DateTime(2024, 12, 2, 3, 0, 0));
-        MeetingHelper.CreateMeeting(new DateTime(2024, 12, 2, 10, 0, 1), new DateTime(2024, 12, 2, 11, 0, 0));
-        NotificationHelper.CreateNotification(1, new TimeSpan(1, 15, 0));
-        NotificationHelper.CreateNotification(3, new TimeSpan(5, 0, 0));
-
         var firstStep = new MainMenuStep();
         firstStep.Execute();
 
-        Console.ReadKey();
     }
 }
