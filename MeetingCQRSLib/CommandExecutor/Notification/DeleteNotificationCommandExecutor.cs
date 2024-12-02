@@ -25,7 +25,7 @@ namespace MeetingCoreLib.CommandExecutor.Meeting
         public override void Execute(DeleteNotificationCommand cmd_)
         {
             if (!_model.NotificationDisct.ContainsKey(cmd_.NotificationId))
-                throw new KeyNotFoundException($"Встреча с уникальным кодом '{cmd_.NotificationId}' не найдена");
+                throw new KeyNotFoundException($"Уведомление с уникальным кодом '{cmd_.NotificationId}' не найдена");
 
             _model.NotificationDisct.Remove(cmd_.NotificationId);
 
