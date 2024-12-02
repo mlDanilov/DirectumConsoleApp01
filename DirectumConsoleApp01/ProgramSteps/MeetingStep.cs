@@ -101,7 +101,7 @@ namespace DirectumConsoleApp01.ProgramSteps
 
                 MeetingHelper.ExportMeetingsToFileByDay(fileName, day);
                 Console.Clear();
-                writeSuccess("Файл успешно экспортирован");
+                writeSuccess("Встречи успешно экспортированы");
                 notify();
                 showInfo();
                 menu();
