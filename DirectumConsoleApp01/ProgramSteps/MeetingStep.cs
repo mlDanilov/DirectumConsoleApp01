@@ -36,7 +36,15 @@ namespace DirectumConsoleApp01.ProgramSteps
 
                 var meetingList = MeetingHelper.GetMeetingsByDay(day);
                 Console.Clear();
-                MeetingHelper.PrintMeetingList(meetingList);
+                //Костыль
+                if (meetingList.Count == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Встречи отсутствуют");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                    MeetingHelper.PrintMeetingList(meetingList);
                 notify();
                 showInfo();
                 menu();
@@ -50,6 +58,13 @@ namespace DirectumConsoleApp01.ProgramSteps
 
                 var meetingList = MeetingHelper.GetMeetingsByIds(meetingIdArray);
                 Console.Clear();
+                //Костыль
+                if (meetingList.Count == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Встречи отсутствуют");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
                 MeetingHelper.PrintMeetingList(meetingList);
                 notify();
                 showInfo();
